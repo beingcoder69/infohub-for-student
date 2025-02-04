@@ -1,0 +1,152 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Ensure full-page layout */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #808080;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #00aaff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none !important; /* Remove underline */
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Remove underline on all states */
+nav ul li a:link, 
+nav ul li a:visited, 
+nav ul li a:hover, 
+nav ul li a:active {
+    text-decoration: none !important;
+}
+
+/* Active tab effect */
+nav ul li a.active {
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Allows main content to take up remaining space */
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Sections */
+section {
+    display: none;
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Show active section */
+section:target {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer (Sticky at bottom) */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.8);  /* Light background to distinguish the article */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;  /* Limit the maximum width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    font-size: 16px;  /* Control text size */
+    line-height: 1.6;  /* Improve readability */
+}
+
+article h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    article {
+        padding: 15px;
+        font-size: 14px;  /* Smaller text size for mobile screens */
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+}
