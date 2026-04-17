@@ -10,10 +10,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("image.png") no-repeat center center/cover;=
+    background: url("https://i.ibb.co.com/jk8p5WQy/image-Photoroom.png") no-repeat center center/cover;
     background-size: cover;
 }
-
 
 .container {
     display: flex;
